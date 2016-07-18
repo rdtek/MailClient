@@ -7,8 +7,8 @@
     <ProjectGuid>{1F8D4C49-693B-41A4-B4AB-8D98FBA3B8E1}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EMailClient</RootNamespace>
-    <AssemblyName>EMailClient</AssemblyName>
+    <RootNamespace>MailClient</RootNamespace>
+    <AssemblyName>MailClient</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CmdLineArgs.cs" />
+    <Compile Include="PasswordReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
