@@ -1,4 +1,4 @@
-# mail-client
+# Mail Client
 
 Send emails from the command line, using SMTP account.
 
