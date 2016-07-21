@@ -20,11 +20,26 @@ namespace MailClient
             return m_originalArgs[argIndex];
         }
 
+        public string Get(string argName)
+        {
+            int argValIndex = -1;
+            int argNameIndex = Array.FindIndex(m_originalArgs, 
+                s => s.Equals(argName, StringComparison.InvariantCultureIgnoreCase));
+            if (m_originalArgs.Length >= argNameIndex + 1) argValIndex = argNameIndex + 1;
+            return m_originalArgs[argValIndex];
+        }
+
         public bool Exists(int argIndex)
         {
             return m_originalArgs != null 
                 && m_originalArgs.Length >= argIndex + 1
                 && m_originalArgs[argIndex].Length >= 1;
+        }
+
+        public bool Exists(string argName)
+        {
+            return Array.FindIndex(m_originalArgs, 
+                s => s.Equals(argName, StringComparison.InvariantCultureIgnoreCase)) >= 0;
         }
 
         private static Dictionary<string, string> ParseArgs(string[] args)
